@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>portfolio-ft.abdulkadar</title>
+        <meta name="description"
+              content="The Kinetic - an experimental, mechanically advanced creative agency interface built with pure vanilla HTML, CSS and JS.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@700;800&display=swap"
+              rel="stylesheet">
+        <link rel="stylesheet" href="templatemo-631-kinetic-style.css">
+    </head>
+    <body>
+        <!-- ====================== TOP BAR ====================== -->
+        <nav class="topbar">
+            <a class="brand" href="#hero">ABD<span>UL</span> CY-TECHIE</a>
+            <div class="nav-index">
+                <a href="#hero">01 /about me </a>
+                <a href="#projects">02 / projects</a>
+                <a href="#skills">03 / skills</a>
+                <a href="#certs">04 / certifications</a>
+                <a href="#bugbounty">05 / bug bounty</a>
+                <a href="#internships">06 / internships</a>
+                <a href="#courses">07 / courses</a>
+                <a href="#initiate">08 /contact</a>
+            </div>
+        </nav>
+        <!-- ====================== 01 HERO ====================== -->
+        <section class="hero" id="hero">
+            <h1 class="hero-title">AB<b>D</b>UL</h1>
+            <svg class="string-svg"
+                 id="stringSvg"
+                 preserveAspectRatio="none"
+                 aria-hidden="true">
+                <path class="string-path" id="stringPath"></path>
+                <circle class="string-anchor" id="anchorL" r="5"></circle>
+                <circle class="string-anchor" id="anchorR" r="5"></circle>
+                <circle class="string-grip"   id="grip"    r="7"></circle>
+            </svg>
+            <div class="hero-foot">
+                <span class="mono-label">CYBERSECURITY // SECURITY RESEARCH</span>
+                <p>  I explore systems, break assumptions, analyze vulnerabilities,
+        and build security-focused tools through offensive security,
+        web application security and research.</p>
+            </div>
+            <div class="hero-hint">[ move cursor to bend ]</div>
+        </section>
+        <!-- ====================== 02 PROJECTS MATRIX ====================== -->
+        <section class="matrix-wrap" id="projects">
+            <div class="section-head">
+                <h2>THE <i>MATRIX</i> ACCORDION</h2>
+                <p>Five works on a flat grid. Select any cell to force it open. The rest collapse into strips.</p>
+            </div>
+            <div class="matrix" id="matrix-projects" data-cols="3">
+                <!-- swap images/project-01.jpg ... with your own -->
+                <div class="cell" tabindex="0" role="button" aria-label="Project AI Interview Assessment">
+                    <div class="cell-media" style="background-image:url('images/project-01.jpg')"></div>
+                    <div class="cell-num">01</div>
+                    <div class="cell-name">AI Interview</div>
+                    <div class="cell-detail">An AI-powered interview assessment platform conducting adaptive interviews through real-time voice interaction, evaluating responses and generating performance analytics.</div>
+                    <div class="cell-cat">AI / Web App / Full Stack</div>
+                </div>
+                <div class="cell" tabindex="0" role="button" aria-label="Project ReconForge">
+                    <div class="cell-media" style="background-image:url('images/reconforge.jpg')"></div>
+                    <div class="cell-num">02</div>
+                    <div class="cell-name">ReconForge</div>
+                    <div class="cell-detail">A unified reconnaissance toolkit that organizes multiple recon and enumeration utilities into a single terminal-based workflow.</div>
+                    <div class="cell-cat">Cybersec / Recon / Automation</div>
+                </div>
+                <div class="cell" tabindex="0" role="button" aria-label="Project Terms and Privacy Analyzer">
+                    <div class="cell-media" style="background-image:url('images/project-03.jpg')"></div>
+                    <div class="cell-num">03</div>
+                    <div class="cell-name">Terms Analyzer</div>
+                    <div class="cell-detail">A browser security extension that analyzes website terms and privacy policies to identify risky, misleading or concerning clauses.</div>
+                    <div class="cell-cat">Extension / Security / NLP</div>
+                </div>
+                <div class="cell" tabindex="0" role="button" aria-label="Project Web Application Security Lab">
+                    <div class="cell-media" style="background-image:url('images/web scan.jpg')"></div>
+                    <div class="cell-num">04</div>
+                    <div class="cell-name">Web Sec Lab</div>
+                    <div class="cell-detail">A documented security research project applying offensive security and web app testing techniques to real-world targets.</div>
+                    <div class="cell-cat">Offensive / Web Security</div>
+                    <a class="cell-touch" href="https://github.com/abdulkadar-coder/cybermart-lab-.git" target="_blank" rel="noopener noreferrer">Touch me</a>
+                </div>
+                <div class="cell" tabindex="0" role="button" aria-label="Project Canteen Management">
+                    <div class="cell-media" style="background-image:url('images/canteenportal.jpg')"></div>
+                    <div class="cell-num">05</div>
+                    <div class="cell-name">Canteen Portal</div>
+                    <div class="cell-detail">A full-stack canteen management platform with role-based access, real-time order tracking and management dashboards for food ordering and inventory.</div>
+                    <div class="cell-cat">Full Stack / SaaS / Mgmt</div>
+                    <a class="cell-touch" href="https://github.com/abdulkadar-coder/foodmanagementweb.git" target="_blank" rel="noopener noreferrer">Touch me</a>
+                </div>
+            </div>
+        </section>
+        <!-- ====================== 03 SKILLS MATRIX ====================== -->
+        <section class="matrix-wrap" id="skills">
+            <div class="section-head">
+                <h2>THE <i>SKILL</i> MATRIX</h2>
+                <p>Core skills on a flat grid. Select any cell to force it open. The rest collapse into strips.</p>
+            </div>
+            <div class="matrix matrix-2x2" id="matrix-skills" data-cols="2">
+                <div class="cell" tabindex="0" role="button" aria-label="Skill Penetration Testing">
+                    <div class="cell-media" style="background-image:url('images/skill1.jpg')"></div>
+                    <div class="cell-num">01</div>
+                    <div class="cell-name">Pen Testing</div>
+                    <div class="cell-detail">Offensive security assessments across targets. Tools: Burp Suite, Nmap, SQLMap, Metasploit, Kali Linux, OWASP, Python.</div>
+                    <div class="cell-cat">Offensive Security</div>
+                </div>
+                <div class="cell" tabindex="0" role="button" aria-label="Skill Web App Security">
+                    <div class="cell-media" style="background-image:url('images/skill2.jpg')"></div>
+                    <div class="cell-num">02</div>
+                    <div class="cell-name">Web App Security</div>
+                    <div class="cell-detail">Application security testing using SQLi, XSS, IDOR, JWT, API security, authentication and authorization.</div>
+                    <div class="cell-cat">Application Security</div>
+                </div>
+                <div class="cell" tabindex="0" role="button" aria-label="Skill Bug Bounty">
+                    <div class="cell-media" style="background-image:url('images/skill3.jpg')"></div>
+                    <div class="cell-num">03</div>
+                    <div class="cell-name">Bug Bounty</div>
+                    <div class="cell-detail">Vulnerability research through recon, asset discovery and subdomain enumeration, PoC building and responsible disclosure.</div>
+                    <div class="cell-cat">Vulnerability Research</div>
+                </div>
+                <div class="cell" tabindex="0" role="button" aria-label="Skill CTF and Security Research">
+                    <div class="cell-media" style="background-image:url('images/skill4.jpg')"></div>
+                    <div class="cell-num">04</div>
+                    <div class="cell-name">CTF & Research</div>
+                    <div class="cell-detail">Practical security across web, crypto, OSINT, reverse engineering, forensics and Linux.</div>
+                    <div class="cell-cat">Practical Security</div>
+                </div>
+            </div>
+        </section>
+        <!-- ====================== 04 COMPETITION CERTIFICATIONS MATRIX ====================== -->
+        <section class="matrix-wrap" id="certs">
+            <div class="section-head">
+                <h2>THE <i>CERT</i> MATRIX</h2>
+                <p>Competition credentials on a flat grid. Select any cell to force it open. The rest collapse into strips.</p>
+            </div>
+            <div class="matrix matrix-2x2" id="matrix-certs" data-cols="2">
+                <div class="cell" tabindex="0" role="button" aria-label="Certification ByteBeat 2025">
+                    <div class="cell-media" style="background-image:url('images/comp1.jpg')"></div>
+                    <div class="cell-num">01</div>
+                    <div class="cell-name">ByteBeat 2025</div>
+                    <div class="cell-detail">Capture the Flag - event series by the Dept. of Networking and Communications at SRM Institute of Science and Technology, with exposure to CTF and cybersecurity-focused challenges.</div>
+                    <div class="cell-cat">CTF</div>
+                </div>
+                <div class="cell" tabindex="0" role="button" aria-label="Certification Hackathon 2025">
+                    <div class="cell-media" style="background-image:url('images/comp2.png')"></div>
+                    <div class="cell-num">02</div>
+                    <div class="cell-name">Hackathon 2025</div>
+                    <div class="cell-detail">CyberSecurity participation - organized by the National Cyber Security Research Council (NCSRC) at IIT Madras, with hands-on cybersecurity problem-solving and competitive challenges.</div>
+                    <div class="cell-cat">Hackathon</div>
+                </div>
+                <div class="cell" tabindex="0" role="button" aria-label="Certification Into the Void 2.0">
+                    <div class="cell-media" style="background-image:url('images/comp2.jpeg')"></div>
+                    <div class="cell-num">03</div>
+                    <div class="cell-name">Into the Void 2.0</div>
+                    <div class="cell-detail">CTF - international-level competition organized by Exploit at Chennai Institute of Technology, competed as part of Team P4X7.</div>
+                    <div class="cell-cat">CTF</div>
+                </div>
+                <div class="cell cell-graph" tabindex="0" role="button" aria-label="Achievements Line Graph">
+                    <div class="graph-wrap">
+                        <div class="graph-title">MY JOURNEY</div>
+                        <div class="graph-canvas">
+                            <svg class="line-graph" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                                <polyline class="graph-area"
+                                          points="4,86 100,86 100,6 4,34"></polyline>
+                                <polyline class="graph-line"
+                                          points="4,34 16,38 28,42 41,32 54,36 67,26 79,17 90,11 100,6"></polyline>
+                            </svg>
+                            <div class="graph-labels">
+                                <div class="gpt" style="left:4%; top:34%"><i></i><b>Nullclass</b><span>Internship</span></div>
+                                <div class="gpt" style="left:16%; top:38%"><i></i><b>Extazee</b><span>Internship</span></div>
+                                <div class="gpt" style="left:28%; top:42%"><i></i><b>DG Interns</b><span>Internship</span></div>
+                                <div class="gpt" style="left:41%; top:32%"><i></i><b>CyberSec Basics</b><span>Course</span></div>
+                                <div class="gpt" style="left:54%; top:36%"><i></i><b>WiFi PenTest</b><span>Course</span></div>
+                                <div class="gpt" style="left:67%; top:26%"><i></i><b>Cyber Sim</b><span>Course</span></div>
+                                <div class="gpt" style="left:79%; top:17%"><i></i><b>ByteBeat 25</b><span>CTF</span></div>
+                                <div class="gpt" style="left:90%; top:11%"><i></i><b>Hackathon 25</b><span>Hackathon</span></div>
+                                <div class="gpt" style="left:100%; top:6%"><i></i><b>Into the Void 2.0</b><span>Int'l CTF</span></div>
+                            </div>
+                        </div>
+                        <div class="graph-caption">Internships · Courses · Competitions</div>
+                    </div>
+                    <div class="cell-num">04</div>
+                    <div class="cell-name">Achievements</div>
+                    <div class="cell-detail">My security journey, point by point: the internships, courses and competitions I attended, climbing from my first internship to international CTF rounds.</div>
+                    <div class="cell-cat">Journey</div>
+                </div>
+            </div>
+        </section>
+        <!-- ====================== 05 INTERNSHIPS MATRIX ====================== -->
+        <section class="matrix-wrap" id="internships">
+            <div class="section-head">
+                <h2>THE <i>INTERN</i> MATRIX</h2>
+                <p>Experience on a flat grid. Select any cell to force it open. The rest collapse into strips.</p>
+            </div>
+            <div class="matrix matrix-2x2" id="matrix-internships" data-cols="2">
+                <div class="cell" tabindex="0" role="button" aria-label="Internship Nullclass">
+                    <div class="cell-media" style="background-image:url('images/internship2.png')"></div>
+                    <div class="cell-num">01</div>
+                    <div class="cell-name">Nullclass</div>
+                    <div class="cell-detail">Cybersecurity & Web Application Security - hands-on project training focused on hacking real-time web applications, strengthening practical web security and vulnerability-testing skills.</div>
+                    <div class="cell-cat">Cybersecurity / Web Sec</div>
+                </div>
+                <div class="cell" tabindex="0" role="button" aria-label="Internship Extazee Software Solution">
+                    <div class="cell-media" style="background-image:url('images/internship1.png')"></div>
+                    <div class="cell-num">02</div>
+                    <div class="cell-name">Extazee Software</div>
+                    <div class="cell-detail">Network Security Internship - practical exposure to networking concepts, security practices and real-world cybersecurity environments.</div>
+                    <div class="cell-cat">Network Security</div>
+                </div>
+                <div class="cell" tabindex="0" role="button" aria-label="Internship DG Interns Hub">
+                    <div class="cell-media" style="background-image:url('images/internship3.jpeg')"></div>
+                    <div class="cell-num">03</div>
+                    <div class="cell-name">DG Interns Hub</div>
+                    <div class="cell-detail">Cybersecurity Project Internship - project-based training with hands-on security concepts, practical implementation and real-world problem solving.</div>
+                    <div class="cell-cat">Cybersecurity</div>
+                </div>
+            </div>
+        </section>
+        <!-- ====================== 07 COURSES MATRIX ====================== -->
+        <section class="matrix-wrap" id="courses">
+            <div class="section-head">
+                <h2>THE <i>COURSE</i> MATRIX</h2>
+                <p>Completed courses on a flat grid. Select any cell to force it open. The rest collapse into strips.</p>
+            </div>
+            <div class="matrix matrix-courses" id="matrix-courses" data-cols="3">
+                <div class="cell" tabindex="0" role="button" aria-label="Course Cyber Security for Beginners">
+                    <div class="cell-media" style="background-image:url('images/course1.png')"></div>
+                    <div class="cell-num">01</div>
+                    <div class="cell-name">Cyber Security for Beginners</div>
+                    <div class="cell-detail">Foundations of cybersecurity - core security concepts, common threats, defense fundamentals and best practices for beginners.</div>
+                    <div class="cell-cat">Course</div>
+                </div>
+                <div class="cell" tabindex="0" role="button" aria-label="Course WiFi Pen Testing">
+                    <div class="cell-media" style="background-image:url('images/course2.jpeg')"></div>
+                    <div class="cell-num">02</div>
+                    <div class="cell-name">WiFi Pen Testing</div>
+                    <div class="cell-detail">Wireless penetration testing - analyzing and testing WiFi networks for vulnerabilities, weak encryption and misconfigurations.</div>
+                    <div class="cell-cat">Offensive Security</div>
+                </div>
+                <div class="cell" tabindex="0" role="button" aria-label="Course Cyber Simulation">
+                    <div class="cell-media" style="background-image:url('images/delliote.jpg')"></div>
+                    <div class="cell-num">03</div>
+                    <div class="cell-name">Cyber Simulation</div>
+                    <div class="cell-detail">Cyber simulation training - hands-on simulated cyber scenarios and incident response exercises to build practical defensive skills.</div>
+                    <div class="cell-cat">Simulation</div>
+                </div>
+            </div>
+        </section>
+        <!-- ====================== 06 BUG BOUNTY MATRIX ====================== -->
+        <section class="matrix-wrap" id="bugbounty">
+            <div class="section-head">
+                <h2>THE <i>BOUNTY</i> MATRIX</h2>
+                <p>Responsible-disclosure findings on a flat grid. Select any cell to force it open.</p>
+            </div>
+            <div class="matrix matrix-2x2" id="matrix-bugbounty" data-cols="2">
+                <div class="cell" tabindex="0" role="button" aria-label="Bug Bounty Finding 01 Carenium Critical Data Disclosure">
+                    <div class="cell-media is-top" style="background-image:url('images/carenium.jpg')"></div>
+                    <div class="cell-num">01</div>
+                    <div class="cell-name">Carenium KYC Leak</div>
+                    <div class="cell-detail">Critical (CVSS 9.1) healthcare data disclosure. A Supabase anon key shipped in the prod JS bundles, plus a permissive RLS policy, exposed the full PII of 38 users — passport photos, Aadhaar, PAN, addresses & health fields — with zero credentials. A public storage bucket also leaked passport scans. Reproduced end-to-end, disclosed responsibly; write paths were all RLS-denied.</div>
+                    <div class="cell-cat">Critical 9.1 · Valid · Disclosed</div>
+                    <button type="button" class="cell-touch" data-open="writeup-carenium" aria-haspopup="dialog">Touch me</button>
+                </div>
+                <div class="cell" tabindex="0" role="button" aria-label="Bug Bounty Finding 02 Dekco Orthanc PACS Critical PHI Leak">
+                    <div class="cell-media is-top" style="background-image:url('images/Iron Man.jpg')"></div>
+                    <div class="cell-num">02</div>
+                    <div class="cell-name">Dekco PACS PHI Leak</div>
+                    <div class="cell-detail">Critical (CWE-285) — zfp-direct.dekco.ai exposes the full Orthanc PACS admin REST API with zero auth. /orthanc/system confirms IsHttpServerSecure:false, ReadOnly:false. Exposes real patients' demographics + raw DICOM images (verified on 2 independent patients) and, being non-read-only, allows modify/delete/inject of studies + DICOM C-MOVE SSRF. Report #73328074 — program review requested.</div>
+                    <div class="cell-cat">Critical · Awaiting reply</div>
+                    <button type="button" class="cell-touch" data-open="writeup-dekco" aria-haspopup="dialog">Touch me</button>
+                </div>
+                <div class="cell" tabindex="0" role="button" aria-label="Bug Bounty Finding 03 Vibinex Unauthenticated SQL Injection">
+                    <div class="cell-media" style="background-image:url('images/vibinex.jpg')"></div>
+                    <div class="cell-num">03</div>
+                    <div class="cell-name">Vibinex SQLi Write</div>
+                    <div class="cell-detail">High (CWE-89) — vibinex.com/api/dpu/aliases runs an unparameterized SQL UPDATE from attacker-controlled input (repo_name/aliases) with no auth. Confirmed live via 200-vs-500 oracle — a single quote breaks PostgreSQL. Enables DB writes/reads incl. users & stored OAuth tokens (auth_info), and poisoning repos.aliases to corrupt the reviewer-relevance engine. Report #80036429 — program review requested.</div>
+                    <div class="cell-cat">High · Awaiting reply</div>
+                    <button type="button" class="cell-touch" data-open="writeup-vibinex" aria-haspopup="dialog">Touch me</button>
+                </div>
+                <div class="cell cell-3d" tabindex="0" role="button" aria-label="Bug Bounty Interactive 3D Vault">
+                    <div class="trio3d" id="bounty3d" aria-hidden="true"></div>
+                    <div class="cell-num">04</div>
+                    <div class="cell-name">The Vault</div>
+                    <div class="cell-detail">An interactive core — drag to inspect it. Findings orbit the secured centre like nodes on a wire.</div>
+                    <div class="cell-cat">Interactive 3D</div>
+                </div>
+            </div>
+        </section>
+        <!-- ====================== 08 LENTICULAR ====================== -->
+        <section class="reveal" id="reveal">
+            <div class="reveal-cap">
+                <span class="mono-label">Lenticular Print // Live</span>
+                <h2>SWEEP TO <i>FLIP</i> THE FRAME</h2>
+                <p style="font-size:.64rem;
+                          letter-spacing:.22em;
+                          text-transform:uppercase;
+                          color:var(--accent-1);
+                          margin-top:10px">[ run the cursor past both edges for a full flip ]</p>
+            </div>
+            <div class="lenti-stage" id="lentiStage">
+                <div class="lenti" id="lenti" aria-hidden="true"
+                     data-front="images/myimage_4x3.png"
+                     data-back="images/cofounder.png"></div>
+            </div>
+        </section>
+        <!-- ====================== 09 INITIATE ====================== -->
+        <footer class="initiate" id="initiate">
+            <div class="initiate-inner">
+                <h2 class="scatter" id="scatter">LETS //CONNECT</h2>
+                <div class="sub-wrap" id="subWrap">
+                    <form class="subscribe" id="subscribe" novalidate>
+                        <input type="email"
+                               class="sub-input"
+                               id="subEmail"
+                               placeholder="you@studio.com"
+                               aria-label="Email address"
+                               required>
+                        <button type="submit" class="sub-btn">Initiate</button>
+                    </form>
+                    <div class="sub-note" id="subNote">Join the drop list. No noise.</div>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/abdulkadar-coder" target="_blank" rel="nofollow noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/syed-abdul-kadar-382522328?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="nofollow noopener">LinkedIn</a>
+                <a href="https://tryhackme.com/p/abdulkadar4416" target="_blank" rel="nofollow noopener">TryHackMe</a>
+            </div>
+        </footer>
+        <!-- ====================== WRITE-UP MODALS ====================== -->
+        <div class="modal" id="writeup-carenium" role="dialog" aria-modal="true"
+             aria-labelledby="writeup-carenium-title">
+            <div class="modal-panel">
+                <button type="button" class="modal-close" aria-label="Close write-up">&times;</button>
+                <span class="modal-kicker">Bug Bounty · Finding 01</span>
+                <h2 id="writeup-carenium-title">Carenium Healthcare Platform — Insecure Direct Data Disclosure (Anonymous KYC/Photo Exfiltration)</h2>
+                <div>
+                    <span class="wup-sev">Critical · CVSS 9.1</span>
+                    <span class="wup-tag">Vulnerability Disclosure</span>
+                    <span class="wup-tag">Client-Assisted PT</span>
+                    <span class="wup-tag">Vendor: Carenium</span>
+                </div>
+                <p><strong>Researcher:</strong> Abdulkadar &nbsp;·&nbsp; <strong>Date:</strong> 2026-09-13 &nbsp;·&nbsp; <strong>CVSS 3.1:</strong> 9.1 — Confidentiality (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N)</p>
+
+                <h3>1 · Executive Summary</h3>
+                <p>A client-assisted security assessment of the Carenium healthcare platform identified a <strong>Critical</strong> information-disclosure chain. The production web app embeds its Supabase <strong>anonymous (anon) API key</strong> in publicly served JavaScript bundles. That key grants unauthenticated read access to the <code>profiles</code> table via Supabase's PostgREST API, exposing the <strong>complete PII of registered users</strong>: passport photographs, Google profile avatars, full home street addresses, mobile numbers, email addresses, Aadhaar numbers, PAN numbers, membership card numbers, and health-related columns (allergies, chronic conditions, blood group), plus subscription and KYC metadata. An additional <strong>public storage bucket</strong> (<code>carenium-card-photos</code>) exposed passport images fetched without any authentication.</p>
+                <p>The exposure required <strong>no account, no credentials, and no session</strong>. It was reproduced end-to-end and all artifacts were preserved for disclosure.</p>
+
+                <h3>2 · Scope &amp; Authorization</h3>
+                <ul>
+                    <li>Engaged under a client relationship with the target organization (authorized penetration testing / vulnerability assessment).</li>
+                    <li>Target: <code>www.carenium.in</code> + associated Supabase backend.</li>
+                    <li>Constraint followed: no destructive testing, no DoS, no mass data exfiltration beyond proof-of-concept confirmation; any test records created were minimal and reversible.</li>
+                </ul>
+
+                <h3>3 · Methodology</h3>
+                <ol>
+                    <li><strong>Recon</strong> — Host enumeration: <code>carenium.in</code> (Vercel, 308 &rarr; <code>www</code>), <code>carenium.com</code> (dead/OVH placeholder). Stack identification via HTTP headers and HTML fingerprints &rarr; <strong>Next.js on Vercel</strong>.</li>
+                    <li><strong>Client-side analysis</strong> — Downloaded the app's <code>_next/static/chunks/*.js</code> bundles and grepped for endpoints/keys. Found the Supabase project URL and anon JWT; app used <code>.from("profiles")</code>.</li>
+                    <li><strong>API discovery</strong> — Probed Supabase REST (<code>/rest/v1/&lt;table&gt;</code>), GraphQL (<code>/graphql/v1</code>), edge functions (<code>/functions/v1/&lt;fn&gt;</code>), and storage (<code>/storage/v1/bucket</code>, <code>/object/list</code>).</li>
+                    <li><strong>Data validation</strong> — Confirmed user data disclosure, enumerated sensitive columns, counted populated rows, decoded embedded base64 images, and verified public-bucket objects were downloadable anonymously.</li>
+                    <li><strong>Write-path tests</strong> — Attempted <code>INSERT</code>/<code>UPDATE</code>/object upload to confirm scope is read-only (all denied by RLS — good).</li>
+                </ol>
+
+                <h3>4 · Findings</h3>
+                <p><strong>4.1 CRITICAL — Anonymous disclosure of user passport photos &amp; KYC data</strong></p>
+                <ul>
+                    <li>Endpoint: <code>POST /rest/v1/profiles?select=*</code> with <code>apikey: &lt;anon&gt;</code></li>
+                    <li>Root cause: anon key shipped in public JS bundle <strong>+</strong> permissive RLS policy allowing anonymous <code>select</code> on <code>profiles</code> <strong>+</strong> sensitive documents stored as base64 inside a DB column.</li>
+                    <li>Live impact (at assessment time): <code>passport_photo_url</code> populated for <strong>9 users</strong> (8 as embedded <code>data:image/webp</code> base64, 1 in public storage) &mdash; full passport images recoverable to disk; <code>avatar_url</code> 25; <code>aadhar_number</code> 10; <code>pan_number</code> 6; <code>email</code> 38/38; <code>phone</code> 20; <code>mobile</code> 16; <code>carenium_card_number</code> 10; subscription data several.</li>
+                    <li>Sample evidence: <code>profiles?select=id,full_name,passport_photo_url</code> returned valid WebP base64 (decoded &amp; verified), and a public-bucket passport JPEG (413KB, with EXIF device + timestamp metadata).</li>
+                </ul>
+                <p><strong>4.2 HIGH — Full street addresses &amp; phone numbers of real users</strong></p>
+                <ul>
+                    <li>Same <code>profiles</code> table returned complete postal addresses and contact numbers (<code>address</code>/<code>address_line</code> populated for 17 and 10 rows). Cross-referenceable with names, photos, and emails &mdash; a complete identity dossier per user.</li>
+                </ul>
+                <p><strong>4.3 MEDIUM — Public storage bucket</strong></p>
+                <ul>
+                    <li><code>carenium-card-photos</code> is a <strong>public</strong> bucket (listable + readable anonymously) containing passport images, one with sensitive EXIF (device model + timestamp).</li>
+                </ul>
+                <p><strong>4.4 LOW / INFORMATIONAL — Additional attack-surface observations</strong></p>
+                <ul>
+                    <li>Open self-signup (<code>POST /auth/v1/signup</code>) returns an <code>authenticated</code> JWT — no RLS escalation possible (other tables scoped to <code>auth.uid()</code>) — noted for defense-in-depth.</li>
+                    <li><code>profiles.cloud_app_state</code> contains a <strong>GPS location schema</strong> (latitude/longitude/accuracy). Values null at assessment time, but the schema sits inside an already-readable table &rarr; <strong>forward privacy risk</strong> (would become a live-tracking leak).</li>
+                </ul>
+                <p><strong>4.5 Verified NOT vulnerable (negative results — good posture)</strong></p>
+                <ul>
+                    <li><code>INSERT</code>/<code>UPDATE</code> on <code>profiles</code> and other tables: RLS-denied.</li>
+                    <li>Upload into storage bucket: RLS-denied (<code>403 AccessDenied</code>).</li>
+                    <li><code>payments</code>, <code>orders</code>, <code>cashfree_orders</code>, <code>carenium_cards</code>, <code>health_records</code>, <code>family_members</code>, <code>hospitals</code>, <code>prescriptions</code>, <code>doctor_profiles</code>, <code>appointments</code>: all RLS-scoped to <code>auth.uid()</code> — no cross-tenant read.</li>
+                    <li>No <code>service_role</code> keys, GraphQL, or edge functions exposed.</li>
+                </ul>
+
+                <h3>5 · Proof of Concept (redacted)</h3>
+                <pre><code># 3-step chain — no credentials required
+
+# 1. anon key recovered from the app's JS bundles (grep)
+grep -rhoE 'eyJ[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{20,}' _next/static/chunks/*.js
+
+# 2. enumerate users + passport photos
+curl -s "https://&lt;proj&gt;.supabase.co/rest/v1/profiles?select=id,full_name,aadhar_number,pan_number,phone,mobile,email,address,address_line,carenium_card_number,passport_photo_url&amp;passport_photo_url=not.is.null" \
+  -H "apikey: &lt;anon&gt;" -H "Authorization: Bearer &lt;anon&gt;"
+
+# 3. passport image exfiltration (embedded base64 or public-bucket URL)</code></pre>
+                <p>Actual sensitive values (PII) intentionally excluded from this public write-up.</p>
+
+                <h3>6 · Impact</h3>
+                <ul>
+                    <li><strong>Identity fraud:</strong> passport photo + Aadhaar + PAN + full address + phone in one payload per victim — every component needed to open accounts, apply for loans, or bypass KYC elsewhere.</li>
+                    <li><strong>Physical / social-engineering risk:</strong> home addresses + phone numbers + photos of a healthcare user base.</li>
+                    <li><strong>Health-data privacy:</strong> medical fields (allergies, chronic conditions, blood group) exposed in violation of healthcare-data expectations.</li>
+                    <li><strong>Reputational/regulatory exposure</strong> for a healthcare brand (India: DPDP Act 2023 relevant).</li>
+                </ul>
+
+                <h3>7 · Remediation (recommended)</h3>
+                <ol>
+                    <li>Move all data access behind a server-side API; <strong>remove the anon key from client bundles</strong> (and disable client-side direct DB access).</li>
+                    <li><strong>Restrict RLS</strong> on <code>profiles</code>: anon may not <code>select</code> PII columns; narrow to <code>auth.uid()</code> = <code>id</code>, and mask sensitive fields.</li>
+                    <li>Make storage <strong>private</strong>; serve via short-lived signed URLs. Stop storing base64 images in-table.</li>
+                    <li>Scope-down <code>cloud_app_state</code> (remove GPS schema from readable surface).</li>
+                    <li>Add anonymous-read rate/volume alerting on <code>profiles</code>.</li>
+                </ol>
+
+                <h3>8 · Timeline / Disclosure</h3>
+                <ul>
+                    <li>2026-09-13 — Assessment performed; findings confirmed and documented.</li>
+                    <li>Initial disclosure to client with remediation guidance; fix verification in progress.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="modal" id="writeup-dekco" role="dialog" aria-modal="true"
+             aria-labelledby="writeup-dekco-title">
+            <div class="modal-panel">
+                <button type="button" class="modal-close" aria-label="Close write-up">&times;</button>
+                <span class="modal-kicker">Bug Bounty · Finding 02</span>
+                <h2 id="writeup-dekco-title">Unauthenticated Orthanc PACS Admin API Exposes Patient Medical Data (PHI) on zfp-direct.dekco.ai</h2>
+                <div>
+                    <span class="wup-sev">Critical · Severity Not Confirmed</span>
+                    <span class="wup-tag">CWE-285 Improper Authorization</span>
+                    <span class="wup-tag">Report #73328074</span>
+                    <span class="wup-tag">Scope: pacs.dekco.ai</span>
+                </div>
+
+                <h3>Report Summary</h3>
+                <p>The Dekco imaging viewer (<code>zfp-direct.dekco.ai</code>) proxies an <strong>Orthanc DICOM server</strong> whose full admin REST API (<code>/orthanc/*</code>) is publicly reachable with <strong>NO authentication</strong>. Confirmed via <code>/orthanc/system</code> (<code>IsHttpServerSecure: false</code>, <code>ReadOnly: false</code>). Any attacker on the internet can enumerate and download real patients' demographics and raw medical images (DICOM), and — because the server is not read-only — can modify/delete studies and inject data. Verified with two independent real patients.</p>
+
+                <h3>Vulnerability Impact</h3>
+                <p>Unauthenticated internet access to the PACS admin API leaks real patients' demographics + medical images (PHI) and allows modification/deletion (<code>ReadOnly: false</code>) — a <strong>Critical healthcare data breach</strong>.</p>
+
+                <h3>Proof of Concept</h3>
+                <p>The Dekco imaging viewer host <code>zfp-direct.dekco.ai</code> reverse-proxies an Orthanc DICOM/PACS server whose entire admin REST API (<code>/orthanc/*</code>) is publicly reachable with no authentication. Confirmed via <code>/orthanc/system</code> returning <code>"IsHttpServerSecure": false</code> and <code>"ReadOnly": false</code>.</p>
+                <p>Any unauthenticated internet user can enumerate resource IDs (<code>/orthanc/changes</code>), view real patient demographics and study metadata with PHI, download whole-study ZIP archives, and download raw DICOM medical images. Because the instance is not read-only, an attacker can also modify, delete, anonymize, or inject imaging studies, and abuse DICOM modalities/peers (C-MOVE) to probe internal infrastructure (SSRF). This is a <strong>Critical healthcare data breach</strong> affecting regulated patient health information.</p>
+
+                <h3>Security Impact</h3>
+                <ul>
+                    <li><strong>Confidentiality (critical):</strong> mass exposure of real patients' PHI (name, ID, date of birth, sex, institution, referring physician, study details) and the medical images themselves, from anywhere on the internet with zero credentials.</li>
+                    <li><strong>Integrity (high):</strong> <code>ReadOnly: false</code> permits bulk-delete, modify, anonymize, and create-dicom — an attacker can alter or destroy medical records and inject fake studies.</li>
+                    <li><strong>Availability:</strong> bulk deletion or resource exhaustion can take down imaging data access.</li>
+                    <li><strong>Network pivot / SSRF:</strong> DICOM storage/retrieve (modalities, peers, C-MOVE) can be aimed at internal hosts.</li>
+                    <li><strong>Regulatory:</strong> exposure of real-patient health data (India DPDP Act / global equivalent). Verified on two independent patients.</li>
+                </ul>
+
+                <h3>Steps To Reproduce</h3>
+                <p>No pre-conditions required — no login, no session, no cookies. Direct unauthenticated requests:</p>
+                <ol>
+                    <li>Confirm the API is open and writable:
+<pre><code>curl "https://zfp-direct.dekco.ai/orthanc/system"
+# 200 OK → "IsHttpServerSecure": false, "ReadOnly": false, "Version": "1.12.7"</code></pre>
+                    </li>
+                    <li>Retrieve a real patient's study metadata (PHI) — <code>200 OK</code>, PatientMainDicomTags populated (name, patient ID, birth date, sex; study e.g. "LT SHOULDER" at a sports-med facility). Patient details redacted here for privacy.</li>
+                    <li>Second independent patient — proves <strong>systemic</strong> exposure (study e.g. "knee^NM" at a 3T MRI center). Details redacted.</li>
+                    <li>Download the full study (ZIP) and a raw DICOM image without auth:
+<pre><code>curl -o study.zip "https://zfp-direct.dekco.ai/orthanc/studies/[id]/archive"
+curl -o img.dcm "https://zfp-direct.dekco.ai/orthanc/instances/[id]/file"
+file study.zip   # => Zip archive data
+file img.dcm     # => DICOM medical imaging data</code></pre>
+                    </li>
+                    <li>Enumeration proof — the changes feed lists every resource ID:
+<pre><code>curl "https://zfp-direct.dekco.ai/orthanc/changes" | jq -r '.Changes[] | "(.ResourceType)\t(.ID)"'</code></pre>
+                    </li>
+                </ol>
+
+                <h3>Specifics</h3>
+                <ul>
+                    <li><strong>Account used:</strong> none required — the endpoint is unauthenticated.</li>
+                    <li><strong>Domains affected:</strong> <code>zfp-direct.dekco.ai</code> — Orthanc/DICOM backend that serves the production platform <code>pacs.dekco.ai</code> (referenced by its CSP frame-src).</li>
+                    <li><strong>Versions/vendors:</strong> Orthanc 1.12.7 (DICOM AE ORTHANC, HTTP port 8042; PostgreSQL index plugin + S3 storage plugin). Exposed via Cloudflare.</li>
+                </ul>
+
+                <h3>Recommendations</h3>
+                <ol>
+                    <li>Enable authentication on Orthanc — create RegisteredUsers and disable anonymous access to the REST API.</li>
+                    <li>Put <code>/orthanc/*</code> behind an authenticated reverse proxy/WAF allowlisted to only the trusted viewer origin.</li>
+                    <li>Set <code>ReadOnly: true</code> for the exposed front-end path so any API exposure cannot modify or delete data.</li>
+                    <li>Remove admin endpoints from public reach — <code>/orthanc/system</code>, <code>/tools</code>, <code>/changes</code>, <code>/peers</code>, <code>/modalities</code> should never be externally accessible.</li>
+                    <li>Treat as a breach — audit <code>/orthanc/changes</code> history for prior unauthorized access, rotate any DICOM/storage credentials, and follow applicable legal notification obligations for the PHI involved.</li>
+                    <li>Verify the fix — unauthenticated requests to <code>https://zfp-direct.dekco.ai/orthanc/*</code> must return 401/403.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="modal" id="writeup-vibinex" role="dialog" aria-modal="true"
+             aria-labelledby="writeup-vibinex-title">
+            <div class="modal-panel">
+                <button type="button" class="modal-close" aria-label="Close write-up">&times;</button>
+                <span class="modal-kicker">Bug Bounty · Finding 03</span>
+                <h2 id="writeup-vibinex-title">Unauthenticated SQL Injection and Database Write via POST /api/dpu/aliases</h2>
+                <div>
+                    <span class="wup-sev">High · Severity Not Confirmed</span>
+                    <span class="wup-tag">CWE-89 SQL Injection</span>
+                    <span class="wup-tag">Report #80036429</span>
+                    <span class="wup-tag">Scope: vibinex.com</span>
+                </div>
+
+                <h3>Report Summary</h3>
+                <p>The <code>POST /api/dpu/aliases</code> endpoint appears to be vulnerable to SQL injection due to the construction of an <strong>unparameterized SQL UPDATE statement</strong> using attacker-controlled values, including <code>repo_name</code>, <code>repo_owner</code>, <code>repo_provider</code>, and <code>aliases</code>.</p>
+                <p>The endpoint is also accessible <strong>without authentication</strong>, allowing an unauthenticated attacker to submit crafted input directly to the affected database operation.</p>
+                <p>During testing, supplying a single quote (<code>'</code>) produced a measurable difference in behavior, including a confirmed <strong>HTTP 200 vs. HTTP 500</strong> response differential — demonstrating attacker-controlled input reaches the SQL query without being safely parameterized or escaped. Further testing demonstrated a boolean/error-based SQL injection oracle that can potentially infer data from the underlying database, which may expose sensitive records including user account information and OAuth-related data stored in <code>auth_info</code>.</p>
+
+                <h3>Vulnerability Impact</h3>
+                <p>Unauthenticated SQL injection, no session required; attacker input executes as SQL on the DB (proven by 200/500 differential). Enables tampering with <code>repos.aliases</code> to poison reviewer-relevance data and arbitrary DB writes/reads, including users and stored OAuth tokens.</p>
+
+                <h3>Proof of Concept</h3>
+                <p>The DPU alias endpoint <code>POST https://vibinex.com/api/dpu/aliases</code> executes an unparameterized SQL UPDATE on the <code>repos</code> table using fully attacker-controlled input (<code>repo_name</code>, <code>repo_owner</code>, <code>repo_provider</code>, <code>aliases</code>) with <strong>no authentication whatsoever</strong> (unlike other <code>/api/*</code> handlers, it never calls <code>getServerSession</code>). In source (<code>pages/api/dpu/aliases.ts</code> &rarr; <code>utils/db/aliases.ts:14-24</code>) the values are string-concatenated into the query.</p>
+                <p>Black-box confirmation on the live service: a benign request returns <code>200 OK</code>; a single quote in the <code>aliases</code> value causes a database error <code>500</code> — proving unauthenticated attacker input is being executed as SQL. A single quote in either <code>aliases</code> or <code>repo_name</code> independently breaks the query (confirmed 500 vs 200 baseline). Multiple attack-controlled fields reach the SQL statement unparameterized.</p>
+
+                <h3>Security Impact</h3>
+                <p>An unauthenticated, internet-facing attacker can:</p>
+                <ul>
+                    <li>Execute <strong>arbitrary SQL</strong> against the application database (confirmed via 200/500 differential).</li>
+                    <li>Tamper with <code>repos.aliases</code> data for any onboarded repository — this data drives reviewer-assignment relevance and PR comment generation, so injected aliases <strong>poison the product's core review logic</strong> (false contributor/reviewer attribution, junk "missing profile handles" comments).</li>
+                    <li>Read the aliases/identity mapping for any repo via the corresponding unauthenticated GET (git emails &rarr; provider handles), enabling <strong>team/account enumeration</strong>.</li>
+                </ul>
+
+                <h3>Steps To Reproduce</h3>
+                <p>No account, session cookie, Authorization header, or any authentication is required. Tested with plain curl against the production service.</p>
+                <ol>
+                    <li>Baseline — benign POST (expected 200 OK):
+<pre><code>curl -si https://vibinex.com/api/dpu/aliases -X POST -H 'Content-Type: application/json' \
+  --data '{"repo_name":"repo","repo_owner":"owner","repo_provider":"github","aliases":["a@b.c"]}'
+# HTTP/2 200 → OK</code></pre>
+                    </li>
+                    <li>Injection trigger — single quote (JSON escape \u0027) in the aliases value (expected 500):
+<pre><code>curl -si https://vibinex.com/api/dpu/aliases -X POST -H 'Content-Type: application/json' \
+  --data '{"repo_name":"repo","repo_owner":"owner","repo_provider":"github","aliases":["x\u0027"]}'
+# HTTP/2 500 → {"error":"Unable to save aliases to DB"}</code></pre>
+                        The error is raised by PostgreSQL when the quote breaks the string literal, i.e. the attacker string is evaluated as SQL.</li>
+                    <li>Quote in <code>repo_name</code> instead (also 500):
+<pre><code>--data-raw '{"repo_name":"x\u0027","repo_owner":"o","repo_provider":"github","aliases":["a@b.c"]}'
+# HTTP/2 500 → same DB-error body — confirms a second injectable field.</code></pre>
+                    </li>
+                </ol>
+
+                <h3>Specifics</h3>
+                <ul>
+                    <li><strong>Account used:</strong> None — fully unauthenticated; no session/cookies/credentials required.</li>
+                    <li><strong>Domain affected:</strong> <code>vibinex.com</code> — endpoint <code>POST /api/dpu/aliases</code>.</li>
+                    <li><strong>Version:</strong> Not version-specific. Tested against the Vercel-hosted production deployment. Related public source: <code>github.com/Alokit-Innovations/vibinex-server</code> (<code>pages/api/dpu/aliases.ts</code>, <code>utils/db/aliases.ts:14-24</code>).</li>
+                </ul>
+
+                <h3>Recommendations</h3>
+                <ol>
+                    <li>Convert <code>utils/db/aliases.ts</code> queries to parameterized statements (<code>$1</code>, <code>$2</code>, ...) — never concatenate user input into SQL.</li>
+                    <li>Add authentication/authorization to all <code>/api/dpu/*</code> endpoints (server-side session check or a shared secret/bearer token used only by the DPU), matching the existing pattern on other <code>/api/*</code> handlers.</li>
+                    <li>Strictly validate <code>repo_owner</code>, <code>repo_name</code>, <code>repo_provider</code>, and each alias value (e.g., email regex whitelist).</li>
+                    <li>Restrict DPU endpoints so they can only be reached by the trusted DPU service layer.</li>
+                    <li>Harden DB credentials used by the application tier and review storage of OAuth tokens in <code>auth_info</code>.</li>
+                </ol>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+        <script src="bounty-3d.js"></script>
+        <script src="templatemo-631-kinetic-script.js"></script>
+    </body>
+</html>

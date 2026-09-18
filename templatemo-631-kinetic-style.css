@@ -1,0 +1,1175 @@
+/*
+  Kinetic Template
+  https://templatemo.com/tm-631-kinetic
+*/
+
+/* =========================================================
+   THE KINETIC  //  Onyx & Acid-Violet
+   Single file. Vanilla only. No frameworks.
+   ========================================================= */
+
+:root {
+    --bg-main: #08080A;
+    /* Deep Onyx */
+    --text-main: #EFEFEF;
+    /* Harsh Silver */
+    --accent-1: #D0FF00;
+    /* Acid Yellow */
+    --accent-2: #FF9E5E;
+    /* Soft Orange */
+    --accent-2-bg: #D98268;
+    /* Soft Terracotta - large fills only */
+
+    /* derived onyx surfaces (kept near-black, never mid-tone) */
+    --surf-1: #0D0D11;
+    --surf-2: #131319;
+
+    --ease-out: cubic-bezier(.16, 1, .3, 1);
+    --ease-io: cubic-bezier(.86, 0, .07, 1);
+
+    --edge-1: rgba(208, 255, 0, .22);
+    --edge-2: rgba(255, 158, 94, .30);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'JetBrains Mono', monospace;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+::selection {
+    background: var(--accent-1);
+    color: var(--bg-main);
+}
+
+h1,
+h2,
+h3,
+.syne {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    line-height: .92;
+    letter-spacing: -.02em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.mono-label {
+    font-size: .7rem;
+    font-weight: 500;
+    letter-spacing: .34em;
+    text-transform: uppercase;
+    color: var(--accent-1);
+}
+
+/* ---------- Fixed top bar ---------- */
+.topbar {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px clamp(18px, 4vw, 46px);
+    mix-blend-mode: difference;
+    pointer-events: none;
+}
+
+.topbar a {
+    pointer-events: auto;
+}
+
+.brand {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: .04em;
+    color: var(--text-main);
+}
+
+.brand span {
+    color: var(--accent-1);
+}
+
+.nav-index {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-index a {
+    font-size: .64rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--text-main);
+    padding: 6px 10px;
+    border: 1px solid transparent;
+    transition: background .35s var(--ease-out), color .35s var(--ease-out), transform .35s var(--ease-out);
+}
+
+.nav-index a:hover {
+    background: var(--accent-1);
+    color: var(--bg-main);
+    transform: skewX(-8deg);
+}
+
+/* over the light footer: drop the difference blend, use solid dark text */
+.topbar.on-light {
+    mix-blend-mode: normal;
+}
+
+.topbar.on-light .brand,
+.topbar.on-light .brand span,
+.topbar.on-light .nav-index a {
+    color: var(--bg-main);
+}
+
+.topbar.on-light .nav-index a:hover {
+    background: var(--bg-main);
+    color: var(--accent-1);
+}
+
+/* =========================================================
+   01  //  HERO - ELASTIC STRING PHYSICS
+   ========================================================= */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 18vw, 15rem);
+    text-align: center;
+    color: var(--text-main);
+    position: relative;
+    z-index: 2;
+    user-select: none;
+    text-shadow: 0 0 60px rgba(8, 8, 10, .9);
+}
+
+.hero-title b {
+    color: var(--accent-2);
+    font-weight: inherit;
+}
+
+/* kinetic box field - subtle outlined shapes shoved aside by the string */
+.field {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.box {
+    position: absolute;
+    border: 1px solid rgba(239, 239, 239, .22);
+    will-change: transform;
+}
+
+.box.acid {
+    border-color: rgba(208, 255, 0, .40);
+}
+
+.box.warm {
+    border-color: rgba(255, 158, 94, .42);
+}
+
+.string-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.string-path {
+    fill: none;
+    stroke: var(--accent-1);
+    stroke-width: 3;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 10px rgba(208, 255, 0, .65));
+}
+
+.string-anchor {
+    fill: var(--accent-1);
+}
+
+.string-grip {
+    fill: var(--accent-2);
+    filter: drop-shadow(0 0 8px rgba(255, 158, 94, .8));
+}
+
+.hero-foot {
+    position: absolute;
+    left: clamp(18px, 4vw, 46px);
+    bottom: 30px;
+    z-index: 4;
+    display: flex;
+    gap: 26px;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 90vw;
+}
+
+.hero-foot p {
+    font-size: .72rem;
+    letter-spacing: .04em;
+    color: var(--text-main);
+    opacity: .8;
+    max-width: 40ch;
+}
+
+.hero-hint {
+    position: absolute;
+    right: clamp(18px, 4vw, 46px);
+    bottom: 30px;
+    z-index: 4;
+    font-size: .64rem;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+}
+
+/* =========================================================
+   02  //  2D MATRIX ACCORDION
+   ========================================================= */
+.matrix-wrap {
+    padding: clamp(60px, 9vh, 120px) clamp(18px, 4vw, 46px) clamp(40px, 7vh, 90px);
+}
+
+.section-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.section-head h2 {
+    font-size: clamp(2rem, 6vw, 4.4rem);
+    color: var(--text-main);
+}
+
+.section-head h2 i {
+    color: var(--accent-1);
+    font-style: normal;
+}
+
+.section-head p {
+    font-size: .72rem;
+    letter-spacing: .04em;
+    opacity: .7;
+    max-width: 32ch;
+}
+
+.matrix {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 8px;
+    height: 80vh;
+    min-height: 520px;
+    transition: grid-template-columns .75s var(--ease-io), grid-template-rows .75s var(--ease-io);
+}
+
+.matrix.matrix-2x2 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 65vh;
+    min-height: 420px;
+}
+
+.matrix.matrix-courses {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 55vh;
+    min-height: 380px;
+}
+
+.cell {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--surf-1);
+    border: 1px solid var(--edge-1);
+    padding: 16px;
+    outline: none;
+    transition: background .5s var(--ease-out), border-color .5s var(--ease-out);
+}
+
+.cell:focus-visible {
+    border-color: var(--accent-1);
+    box-shadow: inset 0 0 0 2px var(--accent-1);
+}
+
+.cell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--accent-2);
+    transform: translateY(101%);
+    transition: transform .45s var(--ease-io);
+    z-index: 0;
+}
+
+.cell:hover::before {
+    transform: translateY(0);
+}
+
+.cell:hover {
+    border-color: var(--accent-2);
+}
+
+.cell:hover .cell-num,
+.cell:hover .cell-name,
+.cell:hover .cell-cat {
+    color: var(--bg-main);
+}
+
+.cell-media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.14);
+    filter: grayscale(.4) contrast(1.06);
+    transition: opacity .6s var(--ease-out), transform 1s var(--ease-out);
+    pointer-events: none;
+}
+
+.cell-media.is-top {
+    background-position: 50% 0%;
+}
+
+.cell-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(8, 8, 10, .30) 0%,
+            rgba(8, 8, 10, .55) 50%,
+            rgba(255, 158, 94, .55) 100%);
+}
+
+.cell.is-active .cell-media {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.cell-num {
+    position: relative;
+    z-index: 1;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.2rem, 2.4vw, 2rem);
+    color: var(--accent-1);
+    transition: color .4s var(--ease-out);
+}
+
+.cell-name {
+    position: relative;
+    z-index: 1;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(.95rem, 1.6vw, 1.5rem);
+    color: var(--text-main);
+    margin-top: 6px;
+    transition: color .4s var(--ease-out);
+}
+
+.cell-cat {
+    position: absolute;
+    left: 16px;
+    bottom: 14px;
+    z-index: 1;
+    font-size: .6rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--text-main);
+    opacity: .7;
+    transition: color .4s var(--ease-out);
+}
+
+.cell-detail {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 40px;
+    z-index: 1;
+    font-size: .74rem;
+    line-height: 1.5;
+    color: var(--text-main);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity .5s var(--ease-out) .15s, transform .5s var(--ease-out) .15s;
+    max-width: 46ch;
+    max-height: 58%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-1) transparent;
+}
+
+.cell.is-active {
+    background: var(--surf-2);
+    border-color: var(--accent-1);
+}
+
+.cell.is-active::before {
+    transform: translateY(101%);
+}
+
+.cell.is-active .cell-num {
+    color: var(--accent-1);
+}
+
+.cell.is-active .cell-detail {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cell.is-dim {
+    opacity: .55;
+}
+
+.cell.is-dim .cell-name,
+.cell.is-dim .cell-cat,
+.cell.is-dim .cell-detail {
+    display: none;
+}
+
+/* ---------- "touch me" full-writeup button ---------- */
+.cell-touch {
+    position: absolute;
+    right: 16px;
+    bottom: 14px;
+    z-index: 2;
+    font-family: inherit;
+    font-size: .58rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--accent-1);
+    background: transparent;
+    border: 1px solid var(--accent-1);
+    border-radius: 999px;
+    padding: 6px 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1.2;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity .5s var(--ease-out) .15s, transform .5s var(--ease-out) .15s, background .3s var(--ease-out), color .3s var(--ease-out);
+    pointer-events: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.cell-touch:hover,
+.cell-touch:focus-visible {
+    background: var(--accent-1);
+    color: var(--bg-main);
+    outline: none;
+}
+
+.cell.is-active .cell-touch {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.cell.is-dim .cell-touch {
+    display: none;
+}
+
+/* ---------- full writeup modal ---------- */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh 5vw;
+    background: rgba(8, 8, 10, .78);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s var(--ease-out), visibility .4s var(--ease-out);
+}
+
+.modal.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-panel {
+    position: relative;
+    width: 100%;
+    max-width: 780px;
+    max-height: 82vh;
+    overflow-y: auto;
+    background: var(--surf-1);
+    border: 1px solid var(--edge-1);
+    padding: clamp(20px, 4vw, 40px);
+    transform: translateY(14px);
+    transition: transform .4s var(--ease-out);
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-1) transparent;
+}
+
+.modal.is-open .modal-panel {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 3;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--edge-1);
+    background: transparent;
+    color: var(--accent-1);
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background .3s var(--ease-out), color .3s var(--ease-out);
+}
+
+.modal-close:hover,
+.modal-close:focus-visible {
+    background: var(--accent-2-bg);
+    color: var(--bg-main);
+    outline: none;
+}
+
+.modal-kicker {
+    display: block;
+    font-size: .6rem;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    margin-bottom: 10px;
+}
+
+.modal-panel h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.1rem, 2.6vw, 1.7rem);
+    line-height: 1.2;
+    color: var(--accent-1);
+    margin: 0 0 22px;
+}
+
+.modal-panel h3 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: .95rem;
+    color: var(--accent-1);
+    margin: 26px 0 8px;
+}
+
+.modal-panel p {
+    font-size: .82rem;
+    line-height: 1.7;
+    color: var(--text-main);
+    margin: 0 0 12px;
+}
+
+.modal-panel ul,
+.modal-panel ol {
+    margin: 0 0 14px;
+    padding-left: 20px;
+}
+
+.modal-panel li {
+    font-size: .82rem;
+    line-height: 1.7;
+    color: var(--text-main);
+    margin-bottom: 6px;
+}
+
+.modal-panel code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: .74rem;
+    color: var(--accent-1);
+    background: rgba(208, 255, 0, .08);
+    padding: 1px 5px;
+    border-radius: 3px;
+}
+
+.modal-panel pre {
+    background: var(--bg-main);
+    border: 1px solid var(--edge-1);
+    border-left: 3px solid var(--accent-2-bg);
+    padding: 12px 14px;
+    overflow-x: auto;
+    margin: 0 0 16px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-2) transparent;
+}
+
+.modal-panel pre code {
+    background: none;
+    padding: 0;
+    font-size: .72rem;
+    color: var(--text-main);
+    white-space: pre;
+}
+
+.modal-panel .wup-tag {
+    display: inline-block;
+    font-size: .58rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--bg-main);
+    background: var(--accent-2-bg);
+    padding: 3px 9px;
+    border-radius: 999px;
+    margin: 0 6px 10px 0;
+}
+
+.modal-panel .wup-sev {
+    display: inline-block;
+    font-size: .58rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--bg-main);
+    background: var(--accent-1);
+    padding: 3px 9px;
+    border-radius: 999px;
+    margin: 0 6px 10px 0;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .modal {
+        padding: 3vh 4vw;
+        align-items: flex-start;
+    }
+
+    .modal-panel {
+        max-height: 90vh;
+    }
+
+    .cell-touch {
+        bottom: 12px;
+    }
+}
+
+/* ---------- stats graph fills an empty grid cell ---------- */
+.cell-graph {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* the collapsed graph cell looks compact; keep the SVG squashed */
+.graph-wrap {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.graph-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(.55rem, 1.3vw, .85rem);
+    letter-spacing: .22em;
+    color: var(--accent-1);
+}
+
+.line-graph {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.graph-canvas {
+    position: relative;
+    flex: 1;
+    min-height: 60px;
+    margin-top: 6px;
+}
+
+.graph-line {
+    fill: none;
+    stroke: var(--accent-2);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    filter: drop-shadow(0 0 4px rgba(255, 158, 94, .55));
+    transition: stroke-dashoffset 1.8s var(--ease-out);
+}
+
+.graph-area {
+    fill: rgba(208, 255, 0, .08);
+    stroke: none;
+    opacity: 0;
+    transition: opacity 1s var(--ease-out) .8s;
+}
+
+.graph-labels {
+    position: absolute;
+    inset: 0;
+}
+
+.gpt {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity .5s var(--ease-out);
+    pointer-events: none;
+}
+
+.gpt i {
+    display: block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent-1);
+    border: 1.5px solid var(--bg-main);
+    box-shadow: 0 0 6px rgba(208, 255, 0, .6);
+}
+
+.gpt b {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .52rem;
+    letter-spacing: .02em;
+    color: var(--text-main);
+    text-shadow: 0 1px 3px rgba(8, 8, 10, .9);
+    margin-top: 3px;
+}
+
+.gpt span {
+    font-size: .44rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent-1);
+    text-shadow: 0 1px 3px rgba(8, 8, 10, .9);
+}
+
+/* reveal the line + points + labels when the cell is expanded */
+.cell.cell-graph.is-active .graph-line {
+    stroke-dashoffset: 0;
+}
+
+.cell.cell-graph.is-active .graph-area {
+    opacity: 1;
+}
+
+.cell.cell-graph.is-active .gpt {
+    opacity: 1;
+}
+
+.cell.cell-graph.is-active .graph-line {
+    transition-delay: .2s;
+}
+
+.cell.cell-graph.is-active .gpt {
+    transition-delay: 1.6s;
+}
+
+.graph-caption {
+    font-size: .58rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--text-main);
+    opacity: .7;
+}
+
+.cell-graph .cell-name {
+    font-size: clamp(.8rem, 1.3vw, 1.2rem);
+}
+
+/* keep the graph readable on hover - don't paint the orange strip over it */
+.cell-graph::before {
+    background: var(--accent-2-bg);
+}
+
+.cell-graph:hover .graph-title,
+.cell-graph:hover .graph-caption {
+    color: var(--bg-main);
+}
+
+.cell-graph.is-active .graph-caption {
+    color: var(--text-main);
+}
+
+/* ---------- interactive 3D "vault" cell ---------- */
+.cell-3d {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--surf-2);
+}
+
+.trio3d {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    min-height: 0;
+}
+
+.trio3d canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    cursor: grab;
+}
+
+.trio3d canvas:active {
+    cursor: grabbing;
+}
+
+/* keep the 3D readable on hover - don't paint the orange strip over it */
+.cell-3d::before {
+    background: var(--accent-2-bg);
+}
+
+.cell.cell-3d.is-active {
+    background: var(--surf-2);
+}
+
+.cell-3d .cell-name {
+    font-size: clamp(.8rem, 1.3vw, 1.2rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .trio3d canvas {
+        cursor: default;
+    }
+}
+
+/* =========================================================
+   03  //  LENTICULAR STRIP REVEAL
+   ========================================================= */
+.reveal {
+    height: 100vh;
+    min-height: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+    padding: 80px clamp(18px, 4vw, 46px);
+}
+
+.reveal-cap {
+    text-align: center;
+}
+
+.reveal-cap h2 {
+    font-size: clamp(1.8rem, 5vw, 3.6rem);
+    color: var(--text-main);
+}
+
+.reveal-cap h2 i {
+    color: var(--accent-2);
+    font-style: normal;
+}
+
+.lenti-stage {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 clamp(70px, 12vw, 150px);
+    /* extra room L/R so edge slices flip fully */
+    touch-action: pan-y;
+}
+
+.lenti {
+    width: 60vw;
+    height: 80vh;
+    max-width: 760px;
+    perspective: 1000px;
+    display: flex;
+    touch-action: pan-y;
+}
+
+.slice {
+    flex: 1 0 0;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.face {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1px;
+    right: -1px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background-size: 60vw 80vh;
+    background-repeat: no-repeat;
+}
+
+.face.back {
+    transform: rotateY(180deg);
+}
+
+.face.front {
+    background-blend-mode: luminosity;
+}
+
+.face.back {
+    background-blend-mode: luminosity;
+}
+
+@media(max-width:760px) {
+    .lenti {
+        width: 88vw;
+        height: 64vh;
+    }
+
+    .face {
+        background-size: 88vw 64vh;
+    }
+}
+
+/* =========================================================
+   04  //  TYPOGRAPHIC SCATTER & SIGNATURE
+   ========================================================= */
+.initiate {
+    position: relative;
+    min-height: 130vh;
+    background: var(--accent-2-bg);
+    color: var(--bg-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px clamp(18px, 4vw, 46px);
+    overflow: hidden;
+}
+
+.initiate-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.scatter {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.65rem, 8vw, 7rem);
+    line-height: .92;
+    text-align: center;
+    color: var(--bg-main);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.scatter .glyph {
+    display: inline-block;
+    will-change: transform;
+    cursor: pointer;
+}
+
+.scatter .glyph.space {
+    width: .32em;
+}
+
+.scatter .glyph.break {
+    flex: 0 0 100%;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: visible;
+    cursor: default;
+}
+
+.scatter .glyph.slash {
+    color: var(--accent-1);
+}
+
+/* subscribe form - present only while the type is assembled */
+.sub-wrap {
+    margin-top: 40px;
+    text-align: center;
+    will-change: opacity, transform;
+}
+
+.subscribe {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.sub-input {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .9rem;
+    background: transparent;
+    color: var(--bg-main);
+    border: 2px solid var(--bg-main);
+    padding: 13px 18px;
+    min-width: clamp(200px, 52vw, 300px);
+    outline: none;
+}
+
+.sub-input::placeholder {
+    color: rgba(8, 8, 10, .5);
+}
+
+.sub-input:focus {
+    border-color: var(--accent-1);
+}
+
+.sub-btn {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: .95rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    background: var(--bg-main);
+    color: var(--accent-1);
+    border: 2px solid var(--bg-main);
+    padding: 13px 28px;
+    cursor: pointer;
+    transition: transform .3s var(--ease-out), background .3s var(--ease-out), color .3s var(--ease-out);
+}
+
+.sub-btn:hover {
+    background: transparent;
+    color: var(--bg-main);
+    transform: skewX(-8deg);
+}
+
+.sub-note {
+    margin-top: 14px;
+    min-height: 1em;
+    font-size: .66rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--bg-main);
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(14px, 3vw, 40px);
+    flex-wrap: wrap;
+    margin-top: 56px;
+}
+
+.social-links a {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(.85rem, 2.4vw, 1.35rem);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--bg-main);
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--bg-main);
+    transition: background .3s var(--ease-out), color .3s var(--ease-out), padding .3s var(--ease-out);
+}
+
+.social-links a:hover {
+    background: var(--bg-main);
+    color: var(--accent-1);
+    padding: 3px 10px;
+    border-color: transparent;
+}
+
+.sig-foot {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+    padding: 18px clamp(18px, 4vw, 46px);
+    font-size: .66rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--bg-main);
+}
+
+.sig-foot a {
+    border-bottom: 2px solid var(--bg-main);
+    padding-bottom: 1px;
+    transition: background .3s var(--ease-out), color .3s var(--ease-out), padding .3s var(--ease-out);
+}
+
+.sig-foot a:hover {
+    background: var(--bg-main);
+    color: var(--accent-1);
+    padding: 2px 6px;
+    border-color: transparent;
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .scatter .glyph {
+        transform: none !important;
+        transition: none;
+    }
+
+    .slice {
+        transform: none !important;
+    }
+}
